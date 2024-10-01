@@ -29,4 +29,4 @@ Once installed, create a file called `tsconfig.json` in your project root and ha
 
 You can download the latest published typings library at any time by simply running the command:
 
-`npm install --save-dev @hitc/netsuite-types`
+`npm install --save-dev @btonasse/suitescript-types`
