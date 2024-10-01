@@ -475,7 +475,7 @@ declare namespace EntryPoints {
   }
 }
 
-namespace SDFInstallation {
+declare namespace SDFInstallation {
   interface runContext {
     /** The version of the SuiteApp currently installed on the account. Specify Null if this is a new installation. */
     fromVersion: string;
