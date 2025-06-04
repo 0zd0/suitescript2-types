@@ -602,5 +602,6 @@ declare module "N/entryPoints" {
         | Plugins.FiConnectivity.returnObject
         | Plugins.DatasetBuilder.returnObject
         | Plugins.WorkbookBuilder.returnObject
-        | CustomRecordAction.returnObject;
+        | CustomRecordAction.returnObject
+        | Record<string, unknown>;
 }
