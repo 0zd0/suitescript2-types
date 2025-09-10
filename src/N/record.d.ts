@@ -697,13 +697,13 @@ declare module "N/record" {
         ignoreMandatoryFields?: boolean;
     }
 
-    interface SubmitFieldsOptions {
+    export interface SubmitFieldsOptions {
         /** The type of record. */
         type: Type | string;
         /** The internal ID of the existing record instance in NetSuite. */
         id: string | number;
         /** The ID-value pairs for each field you want to edit and submit. */
-        values: any;
+        values: { [key: string]: FieldValue };
         /** Additional options to set for the record. */
         options?: SubmitConfig;
     }
