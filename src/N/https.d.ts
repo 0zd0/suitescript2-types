@@ -1,7 +1,7 @@
 declare module "N/https" {
-    import { Encoding } from "N/encode";
-    import { ClientResponse, ServerRequest, ServerResponse, RedirectType, SendRedirectOptions } from "N/http";
-    import { HashAlg, SecretKey } from "N/crypto";
+    import {Encoding} from "N/encode";
+    import {ClientResponse, ServerRequest, ServerResponse, RedirectType, SendRedirectOptions} from "N/http";
+    import {HashAlg, SecretKey} from "N/crypto";
 
     interface CreateSecretKeyOptions {
         /** Specifies the encoding for the SecureKey. */
@@ -68,11 +68,13 @@ declare module "N/https" {
 
     interface HttpsCreateSecretKeyFunction {
         (options: CreateSecretKeyOptions): SecretKey;
+
         promise(options: CreateSecretKeyOptions): Promise<SecretKey>;
     }
 
     interface HttpsCreateSecureStringFunction {
         (options: CreateSecureStringOptions): SecureString;
+
         promise(options: CreateSecureStringOptions): Promise<SecureString>;
     }
 
@@ -82,7 +84,7 @@ declare module "N/https" {
         /** The script ID of the script deployment record. */
         deploymentId: string;
         /** The internal ID or script ID of the script record. Specify internal ID as a number. Specify script ID as a string. */
-        scriptId: string;
+        scriptId: string | number;
         /** The HTTPS headers. */
         headers?: Object;
         /**
@@ -96,6 +98,7 @@ declare module "N/https" {
 
     interface RequestRestletFunction {
         (options: RequestRestletOptions): ClientResponse;
+
         promise(options: RequestRestletOptions): Promise<ClientResponse>;
     }
 
@@ -114,6 +117,7 @@ declare module "N/https" {
      */
     interface RequestSuiteletFunction {
         (options: RequestSuiteletOptions): ClientResponse;
+
         promise(options: RequestSuiteletOptions): Promise<ClientResponse>;
     }
 
@@ -143,16 +147,22 @@ declare module "N/https" {
     export interface SecureString {
         /** Appends a passed in https.SecureString to another https.SecureString. */
         appendString(options: AppendStringOptions): SecureString;
+
         /** Appends a passed in string to a https.SecureString. */
         appendSecureString(options: AppendSecureStringOptions): SecureString;
+
         /** Changes the encoding of a https.SecureString. */
         convertEncoding(options: ConvertEncodingOptions): SecureString;
+
         /** Produces the https.SecureString as a hash. */
         hash(options: HashOptions): SecureString;
+
         /** Produces the https.SecureString as an hmac. */
         hmac(options: HmacOptions): SecureString;
+
         /** Replaces all occurrences of a pattern string inside an https.SecureString with a replacement string. */
         replaceString(options: { pattern: string; replacement: string }): SecureString;
+
         /** Not Documented - 6/9/2016 */
         toString(): string;
     }
@@ -212,5 +222,5 @@ declare module "N/https" {
      */
     export var requestSuiteTalkRest: RequestSuiteTalkRestFunction;
 
-    export { Encoding } from "N/encode";
+    export {Encoding} from "N/encode";
 }
