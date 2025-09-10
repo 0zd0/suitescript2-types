@@ -2,7 +2,7 @@
     "name": "suitescript-types",
     "description": "Typings for SuiteScript 2.1",
     "homepage": "https://github.com/0zd0/suitescript2-types",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "author": "Bernardo Tonasse",
     "license": "MIT",
     "types": "src/index.d.ts",
