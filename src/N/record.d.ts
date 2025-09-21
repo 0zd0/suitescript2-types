@@ -442,7 +442,7 @@ declare module "N/record" {
          * Removes a single select option from a select or multiselect field added via script.
          * Note that this API call can only be used on select/multiselect fields that are added via the UI Objects API (for example on Suitelets or beforeLoad user event scripts).
          */
-        removeSelectOption(options?: { value: string }): void;
+        removeSelectOption(options?: { value: string|null }): void;
         /** get JSON format of the object */
         toJSON(options?: any): { id: string; label: string; type: string };
         toString(options?: any): string;
