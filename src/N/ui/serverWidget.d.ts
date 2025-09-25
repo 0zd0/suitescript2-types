@@ -103,9 +103,12 @@ declare module "N/ui/serverWidget" {
         container?: string;
     }
 
-    export interface AddSelectOptionOptions {
+    export interface SelectOption {
         value: string;
         text: string;
+    }
+
+    export interface AddSelectOptionOptions extends SelectOption {
         isSelected?: boolean;
     }
 
@@ -382,7 +385,7 @@ declare module "N/ui/serverWidget" {
         /** Adds the select options that appears in the dropdown of a field. */
         addSelectOption(options: AddSelectOptionOptions): void;
         /** Obtains a list of available options on a select field. */
-        getSelectOptions(options?: GetSelectOptionsOpts): any[];
+        getSelectOptions(options?: GetSelectOptionsOpts): SelectOption[];
         /** Sets the help text for the field. */
         setHelpText(options: SetHelpTextOptions): Field;
         /**
